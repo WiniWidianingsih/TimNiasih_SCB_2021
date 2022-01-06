@@ -1,21 +1,82 @@
+<!doctype html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
     <link rel="stylesheet" href="dist/reveal.css">
-    <link rel="stylesheet" href="dist/theme/sky.css">   
+    <link rel="stylesheet" href="dist/theme/league.css">
+    <link href="http://fonts.cdnfonts.com/css/adlinnaka" rel="stylesheet">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <style>
+      @import url('http://fonts.cdnfonts.com/css/adlinnaka');
+
+      section img{
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+      }
+
+
+      section .card{
+        border-width: 3px !important;
+        border-style: solid;
+        border-image: linear-gradient(to bottom, #ea005e, rgba(0,0,0,0)) 1;
+        -webkit-box-shadow:2px 2px 11px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow:2px 2px 11px 0px rgba(0,0,0,0.75);
+        box-shadow: 2px 2px 11px 0px rgba(0,0,0,0.75);
+        width: 90%;
+        margin: auto;
+        padding: 20px;
+      }
+      section .end{
+        border-width: 3px !important;
+        border-style: solid;
+        border-image: linear-gradient(to bottom, #ea005e, rgba(0,0,0,0)) 1;
+        -webkit-box-shadow:2px 2px 11px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow:2px 2px 11px 0px rgba(0,0,0,0.75);
+        box-shadow: 2px 2px 11px 0px rgba(0,0,0,0.75);
+      }
+      section .card h5{
+        font-family: 'Adlinnaka', sans-serif;
+      }
+      section .sub-text{
+        font-size: 27px;
+      }
+    </style>
   </head>
   <body>
     <div class="reveal">
-  <div class="slides">
-    <section><img data-src="linkein.png"></section>
-    <section>
-      <section data-background-color="magenta">LinkedIn adalah media sosial yang dapat Anda gunakan untuk menemukan pekerjaan atau tempat magang yang tepat, menghubungkan dan memperkuat hubungan profesional Anda. </section>
-      <section data-background-color="purple">Manfaat dan Alasan LinkedIn memilih Node.js sebagai teknologi baru untuk meningkatkan kinerja mereka dan melayani kumpulan pelanggan yang terus meningkat. Dengan node.js bekerja, Linkedin sekarang hanya perlu menggunakan 3 server, bukan 30 server yang digunakan secara tradisional – mengurangi overhead memori dan mengalihkan perhatian mereka ke kemampuan aplikasi.</section>
-    </section>
-  </div>
-</div>
+      <div class="slides">
+        <section class="Job">
+          <div class="card">
+            <img src="Job.JPEG">
+            <h5>Aplikasi Pencari Lowongan Kerja Freelance berbasis mobile</h5>
+            <h4>by Tim Niasih</h4>
+          </div>
+        </section>
+      </div>
+    </div>
+
     <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
     <script>
-      Reveal.initialize();
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+      });
     </script>
   </body>
 </html>
